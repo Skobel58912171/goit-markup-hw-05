@@ -131,6 +131,8 @@ img {
   margin-right: 0;
 }
 .site-nav .link {
+  transition: color 250ms var(--transition-timing-function),
+    
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -162,13 +164,10 @@ img {
   border-radius: 2px;
 }
 
-.portfolio.link.current::after {
-  border: 1px solid var(--accent-color);
-}
-
 .site-nav .link:focus,
+.site-nav .link:hover,
 .link.current {
-  color: var(--accent-color);
+  color: var(--accent-color);  
 }
 
 .contacts.list {
@@ -187,9 +186,13 @@ img {
 }
 
 .contacts .link {
+  transition: color 250ms var(--transition-timing-function),
+    fill 250ms var(--transition-timing-function);
+
   display: inline-flex;
   align-items: center;
   margin: 0px;
+
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
   font-weight: 500;
@@ -202,9 +205,7 @@ img {
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--accent-color);
-  fill: var(--accent-color);
-  transition: color 250ms var(--transition-timing-function),
-    fill 250ms var(--transition-timing-function);
+  fill: var(--accent-color);  
 }
 
 .contacts.list .mail,
@@ -396,11 +397,15 @@ img {
 }
 
 .social .link.icon {
+  transition: fill 250ms var(--transition-timing-function),
+    background-color 250ms var(--transition-timing-function);
+
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+
   fill: var(--icon-color);
   background-color: var(--primary-white-color);
   border-radius: 50%;
@@ -410,8 +415,7 @@ img {
 .team .icon:focus {
   fill: var(--primary-white-color);
   background-color: var(--accent-color);
-  transition: fill 250ms var(--transition-timing-function),
-    background-color 250ms var(--transition-timing-function);
+  
 }
 
 /* section client */
@@ -433,11 +437,14 @@ img {
 }
 
 .client .link.icon {
+  transition: fill 250ms var(--transition-timing-function);
+
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+
   fill: var(--icon-color);
   border: 1px solid var(--border-client-color);
 }
@@ -446,7 +453,7 @@ img {
 .client .link.icon:focus {
   fill: var(--accent-color);
   border: 1px solid var(--border-client-current-color);
-  transition: fill 250ms var(--transition-timing-function);
+ 
 }
 
 /* address*/
@@ -479,6 +486,7 @@ img {
 }
 
 .address .link {
+  transition: color 250ms var(--transition-timing-function);
   display: block;
   color: var(--accent-white-color);
   text-decoration: none;
@@ -487,7 +495,7 @@ img {
 .address .link:hover,
 .address .link:focus {
   color: var(--accent-color);
-  transition: color 250ms var(--transition-timing-function);
+ 
 }
 .link.mail {
   margin-top: 9px;
@@ -506,16 +514,21 @@ img {
 }
 
 .container-social .link.icon {
+  transition: background-color 250ms var(--transition-timing-function);
   background-color: var(--icon-bg-color);
   fill: #ffffff;
 }
 .container-social .icon:hover,
 .container-social .icon:focus {
   background-color: var(--accent-color);
-  transition: background-color 250ms var(--transition-timing-function);
+  
 }
 /* buttons */
 .btn {
+  transition: color 250ms var(--transition-timing-function),
+    background-color 250ms var(--transition-timing-function),
+    box-shadow 250ms var(--transition-timing-function);
+
   border-radius: 4px;
   padding: 6px 22px;
   border: 0px;
@@ -537,13 +550,12 @@ img {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: color 250ms var(--transition-timing-function),
-    background-color 250ms var(--transition-timing-function),
-    box-shadow 250ms var(--transition-timing-function);
+    0px 2px 2px rgba(0, 0, 0, 0.12);  
 }
 
 .hero .btn {
+  transition: background-color 250ms var(--transition-timing-function);
+
   display: inline-block;
   padding: 10px 32px;
 
@@ -559,8 +571,7 @@ img {
 .hero .btn:hover,
 .hero .btn:focus {
   background-color: var(--button-bg-color);
-  transition: background-color 250ms var(--transition-timing-function);
-}
+ }
 
 /* modal */
 
@@ -697,6 +708,7 @@ img {
 }
 
 .projects .link {
+  transition: box-shadow 250ms var(--transition-timing-function);
   display: block;
   text-decoration: none;
 }
@@ -704,11 +716,9 @@ img {
 .projects .link:hover,
 .projects .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: box-shadow 250ms var(--transition-timing-function);
+    1px 4px 6px rgba(0, 0, 0, 0.16); 
 }
 
 .projects .link:hover .thumb-text {
-  transform: translateY(0);
-  transition: transform 250ms var(--transition-timing-function);
+  transform: translateY(0);  
 }
