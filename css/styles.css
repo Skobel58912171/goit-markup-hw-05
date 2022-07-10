@@ -187,8 +187,8 @@ img {
 }
 
 .contacts .link {
-  transition: color var(--transition-duration) var(--transition-timing-function);
-    fill 250ms var(--transition-timing-function);
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    fill var(--transition-duration) var(--transition-timing-function);
 
   display: inline-flex;
   align-items: center;
@@ -438,7 +438,7 @@ img {
 
 .client .link.icon {
   transition: fill var(--transition-duration) var(--transition-timing-function),
-  border var(--transition-duration) var(--transition-timing-function);
+    border var(--transition-duration) var(--transition-timing-function);
 
   display: flex;
   justify-content: center;
@@ -515,7 +515,7 @@ img {
 .container-social .link.icon {
   transition: background-color var(--transition-duration) var(--transition-timing-function);
   background-color: var(--icon-bg-color);
-  fill: #ffffff;
+  fill: var(--primary-white-color);
 }
 .container-social .icon:hover,
 .container-social .icon:focus {
